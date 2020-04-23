@@ -46,6 +46,7 @@ spec:
     name: http
   selector:
     app: details
+  clusterIP: None
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -74,6 +75,8 @@ spec:
         version: v1
     spec:
       serviceAccountName: bookinfo-details
+      hostname: details
+      subdomain: details-f5
       containers:
       - name: details
         image: docker.io/istio/examples-bookinfo-details-v1:1.15.0
@@ -97,6 +100,7 @@ spec:
     name: http
   selector:
     app: ratings
+  clusterIP: None
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -125,6 +129,8 @@ spec:
         version: v1
     spec:
       serviceAccountName: bookinfo-ratings
+      hostname: ratings
+      subdomain: ratings-f5
       containers:
       - name: ratings
         image: docker.io/istio/examples-bookinfo-ratings-v1:1.15.0
@@ -148,6 +154,7 @@ spec:
     name: http
   selector:
     app: reviews
+  clusterIP: None
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -176,6 +183,8 @@ spec:
         version: v1
     spec:
       serviceAccountName: bookinfo-reviews
+      hostname: reviews-v1
+      subdomain: reviews-f5
       containers:
       - name: reviews
         image: docker.io/istio/examples-bookinfo-reviews-v1:1.15.0
@@ -216,6 +225,8 @@ spec:
         version: v2
     spec:
       serviceAccountName: bookinfo-reviews
+      hostname: reviews-v2
+      subdomain: reviews-f5
       containers:
       - name: reviews
         image: docker.io/istio/examples-bookinfo-reviews-v2:1.15.0
@@ -256,6 +267,8 @@ spec:
         version: v3
     spec:
       serviceAccountName: bookinfo-reviews
+      hostname: reviews-v3
+      subdomain: reviews-f5
       containers:
       - name: reviews
         image: docker.io/istio/examples-bookinfo-reviews-v3:1.15.0
