@@ -1,3 +1,7 @@
+#############################################
+# Changed by Lin Jing @202004 for simulating NGINX MRA - Router-Hub Mode 
+# Any sugggestion kindly pls contact me at https://myf5.net/contactme
+#############################################
 # Copyright 2017 Istio Authors
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
