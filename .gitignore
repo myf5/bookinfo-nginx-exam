@@ -1,0 +1,6 @@
+*.tar
+*.out
+nginx-repo.*
+*.txt
+*.ctrl
+*.bak
